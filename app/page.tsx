@@ -6,8 +6,8 @@ type Product = {
   imagenUrl: string;
 };
 export default async function Home() {
-  const BACKEN_URL = process.env.BACKEN_URL;
-  const response = await fetch(`${BACKEN_URL}/products`);
+  const API = process.env.BACKEND_URL;
+  const response = await fetch(`${API}/products`);
 
   const products = await response.json();
 
