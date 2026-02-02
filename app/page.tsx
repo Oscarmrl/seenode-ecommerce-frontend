@@ -1,3 +1,10 @@
+type Product = {
+  id: number;
+  name: string;
+  descripcion: string;
+  price: number;
+  imagenUrl: string;
+};
 export default async function Home() {
   const BACKEN_URL = process.env.BACKEN_URL;
   const response = await fetch(`${BACKEN_URL}/products`);
@@ -10,7 +17,7 @@ export default async function Home() {
     <div className="bg-zinc-50 dark:bg-black min-h-screen">
       <h1 className=" text-center font-bold text-4xl mt-10">Productos</h1>
 
-      {products.map((product) => (
+      {products.map((product: Product) => (
         <div
           key={product.id}
           className=" grid grid-cols-3 gap-4 p-20 container mx-auto"
