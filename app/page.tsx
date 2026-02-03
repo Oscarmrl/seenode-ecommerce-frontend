@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 type Product = {
   id: number;
   name: string;
